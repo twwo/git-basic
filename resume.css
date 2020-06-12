@@ -1,0 +1,84 @@
+body {
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei";
+}
+
+div.left {
+  float: left;
+  width: 25%;
+  height: 1000px;
+  background: url(background.png);
+}
+
+div.right {
+  box-sizing: border-box;
+  float: left;
+  width: 40%;
+  height: 1000px;
+  border: black 1px solid;
+}
+
+img.photo {
+  margin: 50px 35% 0;
+  height: 150px;
+  width: 30%;
+  border-radius: 50%;
+  border: white 5px solid;
+}
+
+img.icon_left {
+  width: 15px;
+  height: 15px;
+  margin-right: 20px;
+}
+
+p {
+  margin: 10px 10% 0;
+  width: 80%;
+  font-size: 16px;
+}
+
+p.title_left {
+  margin: 50px auto 30px;
+  border: rgb(56, 136, 129) 2px solid;
+  font-size: 26px;
+  text-indent: 1em;
+}
+
+p.info_left {
+  text-indent: 2em;
+}
+
+p.top_right {
+  margin: auto;
+  width: 100%;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  padding-top: 7%;
+  padding-bottom: 5%;
+  background-color: rgb(90, 83, 78);
+}
+
+p.top_right span {
+  color: rgb(180, 245, 223);
+}
+
+p.title_right {
+  background-color: rgb(90, 83, 78);
+  color: rgb(180, 245, 223);
+  margin: 20px auto 10px;
+  width: 90%;
+  font-size: 26px;
+  text-indent: 1em;
+}
+
+ul {
+  margin: 10px 10% 0;
+}
+
+li {
+  margin-top: 10px;
+}
+
+
