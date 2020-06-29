@@ -1,0 +1,43 @@
+--创建student表
+CREATE TABLE student (
+	id INT ( 3 ) ZEROFILL NOT NULL auto_increment,
+	NAME VARCHAR ( 50 ) DEFAULT NULL,
+	age INT DEFAULT NULL,
+	sex VARCHAR ( 6 ) DEFAULT NULL,
+	PRIMARY KEY ( id ) 
+) ENGINE = INNODB
+--插入数据至student表
+insert into student(name, age, sex) 
+VALUES ('zhangsan', 18, 'male'),('lisi', 20, 'female')
+--创建subject表
+CREATE TABLE SUBJECT (
+	id INT NOT NULL auto_increment,
+	SUBJECT VARCHAR ( 50 ) DEFAULT NULL,
+	teacher VARCHAR ( 50 ) DEFAULT NULL,
+	description VARCHAR ( 100 ) DEFAULT NULL,
+	PRIMARY KEY ( id ) 
+) ENGINE = INNODB;
+--修改subject表主键自增从1001开始
+ALTER TABLE SUBJECT AUTO_INCREMENT = 1001;
+--插入数据至subject表
+INSERT INTO SUBJECT ( SUBJECT, teacher, description )
+VALUES
+	( 'Chinese', 'Mr. Wang', 'the exam is easy' ),
+	( 'math', 'Miss Liu', 'the exam is difficult' );
+--创建score表
+CREATE TABLE score (
+	id INT NOT NULL auto_increment,
+	student_id int(3) ZEROFILL,
+	subject_id int,
+	score FLOAT DEFAULT 0,
+	PRIMARY KEY ( id ),
+	foreign key (student_id) references student (id),
+	foreign key (subject_id) references subject (id)
+) ENGINE = INNODB;
+--插入数据至score表
+INSERT INTO score ( student_id, subject_id, score )
+VALUES
+	( 001, 1001, 80 ),
+	( 002, 1002, 60 ),
+	( 001, 1001, 70 ),
+	( 002, 1002, 60.5 );
